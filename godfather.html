@@ -2,8 +2,35 @@
 <html>
 <head>
     <link rel="stylesheet" href="cssrebuild.css">
-    <title>The Godfather</title>
+    <title>☠ The Godfather ☠</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+        body {
+            background: url('images/old_paper.gif') repeat;
+            cursor: url('images/gun_cursor.cur'), auto;
+        }
+
+        .blood-text {
+            font-family: 'UnifrakturCook', cursive;
+            color: darkred;
+            text-shadow: 2px 2px 4px #800000;
+            animation: drip 2s infinite;
+        }
+
+        @keyframes drip {
+            0% { text-shadow: 2px 2px 4px #800000; }
+            50% { text-shadow: 2px 12px 4px #800000; }
+            100% { text-shadow: 2px 2px 4px #800000; }
+        }
+
+        .rose-border {
+            border: 20px groove #8B0000;
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            box-shadow: inset 0 0 50px red;
+        }
+
         .cinematic-container {
             background: linear-gradient(to right, #1a1617, #2b1f20);
             padding: 30px;
@@ -81,48 +108,74 @@
     </style>
 </head>
 <body>
-    <div class="flexeschkere">
+    <embed src="music/godfather_theme.mid" hidden="true" autostart="true" loop="true">
+    
+    <div class="flexeschkere" style="background: url('images/italian_flag.gif') repeat-x;">
         <div class="backbackback">
-            <a href="headsiteworking.html" style="color: #d4af37;"><p class="pupu">Back</p></a>
+            <a href="headsiteworking.html">
+                <marquee width="200" behavior="alternate">
+                    <font face="Old English Text MT" size="7" color="darkred">
+                        ← BACK
+                    </font>
+                </marquee>
+            </a>
         </div>
     </div>
 
-    <div class="cinematic-container">
-        <h1 class="film-title">
-            The Godfather | 1972 | Криминальная драма
-        </h1>
+    <div class="rose-border">
+        <center>
+            <h1 class="blood-text" style="font-size: 72px;">
+                ⚔️ The Godfather | 1972 | Криминальная сага ⚔️
+            </h1>
+            
+            <table width="90%" cellpadding="10" bgcolor="black">
+                <tr>
+                    <td align="center">
+                        <img src="images/godfather_scene1.jpg" style="border: 10px ridge gold;">
+                    </td>
+                    <td>
+                        <marquee direction="up" height="300" scrollamount="2">
+                            <font face="Old English Text MT" size="5" color="#CD853F">
+                                История могущественной семьи Корлеоне, нью-йоркской мафиозной династии...
+                            </font>
+                        </marquee>
+                    </td>
+                </tr>
+            </table>
 
-        <div class="plot-container">
-            <h2 style="color: #d4af37;">Сюжет</h2>
-            <p style="font-size: 1.2em; line-height: 1.6;">
-                История могущественной семьи Корлеоне, нью-йоркской мафиозной династии. Фильм охватывает период с 1945 по 1955 годы, рассказывая о трансформации Майкла Корлеоне из непричастного к семейному бизнесу военного героя в безжалостного мафиозного босса.
-            </p>
-        </div>
+            <blink>
+                <h2 style="color: #FFD700; font-family: 'Times New Roman'; text-shadow: 0 0 10px red;">
+                    ★ АКТЁРСКИЙ СОСТАВ ★
+                </h2>
+            </blink>
 
-        <div class="scene-gallery">
-            <img src="images/godfather_scene1.jpg" alt="Scene 1" class="scene-image">
-            <img src="images/godfather_scene2.jpg" alt="Scene 2" class="scene-image">
-            <img src="images/godfather_scene3.jpg" alt="Scene 3" class="scene-image">
-        </div>
-
-        <h2 style="color: #d4af37; text-align: center; margin-top: 40px;">В главных ролях</h2>
-        <div class="cast-section">
-            <div class="actor-profile">
-                <img src="images/marlon_brando.jpg" alt="Marlon Brando" style="width: 100%; border-radius: 10px;">
-                <h3 style="color: #d4af37;">Marlon Brando</h3>
-                <p>Don Vito Corleone</p>
-            </div>
-            <div class="actor-profile">
-                <img src="images/al_pacino.jpg" alt="Al Pacino" style="width: 100%; border-radius: 10px;">
-                <h3 style="color: #d4af37;">Al Pacino</h3>
-                <p>Michael Corleone</p>
-            </div>
-            <div class="actor-profile">
-                <img src="images/james_caan.jpg" alt="James Caan" style="width: 100%; border-radius: 10px;">
-                <h3 style="color: #d4af37;">James Caan</h3>
-                <p>Sonny Corleone</p>
-            </div>
-        </div>
+            <marquee behavior="slide" direction="right">
+                <img src="images/marlon_brando.jpg" width="200" style="border: 5px dashed gold;">
+                <img src="images/al_pacino.jpg" width="200" style="border: 5px dashed silver;">
+                <img src="images/james_caan.jpg" width="200" style="border: 5px dashed #CD853F;">
+            </marquee>
+        </center>
     </div>
+
+    <script>
+        function playGunshot() {
+            var audio = new Audio('sound/gunshot.wav');
+            audio.play();
+        }
+
+        document.onclick = playGunshot;
+
+        function addRosesPetals() {
+            var petal = document.createElement('div');
+            petal.innerHTML = '🌹';
+            petal.style.position = 'fixed';
+            petal.style.left = Math.random() * 100 + '%';
+            petal.style.fontSize = '20px';
+            petal.style.animation = 'fall 5s linear';
+            document.body.appendChild(petal);
+            setTimeout(() => petal.remove(), 5000);
+        }
+        setInterval(addRosesPetals, 500);
+    </script>
 </body>
 </html>

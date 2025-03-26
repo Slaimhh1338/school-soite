@@ -2,12 +2,17 @@
 <html>
 <head>
     <link rel="stylesheet" href="cssrebuild.css">
-    <title>Nomadland</title>
+    <title>🚐 Nomadland 🏕️</title>
     <style>
         :root {
             --primary-color: #8c7851;
             --text-color: #e5dcc5;
             --bg-color: #1a1a1a;
+        }
+
+        body {
+            background: url('images/desert_animated.gif') fixed;
+            font-family: "Papyrus", fantasy !important;
         }
 
         .nomad-container {
@@ -94,6 +99,23 @@
             transform: translateY(-10px);
         }
 
+        .text-3d {
+            color: #8c7851;
+            text-shadow: 
+                0 1px 0 #776644,
+                0 2px 0 #665533,
+                0 3px 0 #554422,
+                0 4px 0 #443311,
+                0 5px 10px rgba(0,0,0,0.6);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .desert-border {
+            border-image: url('images/cactus_border.gif') 30 round;
+            border-width: 20px;
+            border-style: solid;
+        }
+
         @keyframes fadeUp {
             from {
                 opacity: 0;
@@ -104,47 +126,88 @@
                 transform: translateY(0);
             }
         }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes roll {
+            from { left: -50px; transform: rotate(0deg); }
+            to { left: 100%; transform: rotate(1080deg); }
+        }
     </style>
 </head>
-<body>
-    <div class="flexeschkere">
-        <div class="backbackback">
-            <a href="headsiteworking.html" style="color: var(--text-color);"><p class="pupu">Back</p></a>
-        </div>
-    </div>
+<body bgcolor="#4A3C2C" text="#E5DCC5">
+    <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:url('images/dust.gif');pointer-events:none;"></div>
 
-    <div class="nomad-container">
-        <div class="hero-section">
-            <h1 class="hero-title">Nomadland | 2020</h1>
-        </div>
+    <table width="100%" cellspacing="0" cellpadding="10">
+        <tr>
+            <td align="center">
+                <img src="images/van.gif" width="50">
+                <a href="headsiteworking.html">
+                    <marquee behavior="alternate" width="300">
+                        <font color="#FFD700" size="6">🚐 Вернуться к началу пути 🏕️</font>
+                    </marquee>
+                </a>
+            </td>
+        </tr>
+    </table>
 
-        <div class="content-section">
-            <div class="plot-text">
-                <p>После экономического краха города в сельской Неваде, Ферн упаковывает свой фургон и отправляется в путь, исследуя жизнь за пределами традиционного общества как современный кочевник.</p>
-            </div>
-            
-            <div class="image-gallery">
-                <img src="images/nomad_scene1.jpg" alt="Scene 1" class="gallery-image">
-                <img src="images/nomad_scene2.jpg" alt="Scene 2" class="gallery-image">
-            </div>
-        </div>
+    <center>
+        <div class="desert-border">
+            <h1 class="text-3d" style="font-size:5em;">
+                <marquee scrollamount="3" direction="left">
+                    🌅 Nomadland | 2020 | Драма 🌄
+                </marquee>
+            </h1>
 
-        <div class="cast-grid">
-            <div class="cast-member">
-                <img src="images/frances.jpg" alt="Frances McDormand" style="width: 100%;">
-                <div style="padding: 1rem;">
-                    <h3 style="color: var(--primary-color);">Frances McDormand</h3>
-                    <p style="color: var(--text-color);">Fern</p>
-                </div>
-            </div>
-            <div class="cast-member">
-                <img src="images/david.jpg" alt="David Strathairn" style="width: 100%;">
-                <div style="padding: 1rem;">
-                    <h3 style="color: var(--primary-color);">David Strathairn</h3>
-                    <p style="color: var(--text-color);">Dave</p>
-                </div>
+            <table width="90%" bgcolor="#2C2416">
+                <tr>
+                    <td width="50%">
+                        <img src="images/nomad_landscape.jpg" style="width:100%;border:10px ridge #8c7851;">
+                    </td>
+                    <td>
+                        <marquee direction="up" height="400" scrollamount="1">
+                            <font size="5" color="#E5DCC5">
+                                После экономического краха в маленьком городке, женщина отправляется в путешествие по американскому Западу...
+                            </font>
+                        </marquee>
+                    </td>
+                </tr>
+            </table>
+
+            <blink>
+                <h2 style="color:#FFD700">⭐ В ГЛАВНЫХ РОЛЯХ ⭐</h2>
+            </blink>
+
+            <div style="background:url('images/stars_bg.gif')">
+                <marquee behavior="alternate" scrollamount="5">
+                    <img src="images/frances.jpg" width="200" style="border-radius:50%;border:5px dashed gold">
+                    <img src="images/david.jpg" width="200" style="border-radius:50%;border:5px dashed silver">
+                </marquee>
             </div>
         </div>
-    </div>
+    </center>
+
+    <script>
+        function addTumbleweed() {
+            var tumbleweed = document.createElement('div');
+            tumbleweed.innerHTML = '🌵';
+            tumbleweed.style.position = 'fixed';
+            tumbleweed.style.left = '-50px';
+            tumbleweed.style.top = Math.random() * window.innerHeight + 'px';
+            tumbleweed.style.fontSize = '30px';
+            tumbleweed.style.animation = 'roll 10s linear';
+            document.body.appendChild(tumbleweed);
+            setTimeout(() => tumbleweed.remove(), 10000);
+        }
+        setInterval(addTumbleweed, 3000);
+
+        // Автоматическое воспроизведение звуков ветра
+        var windSound = new Audio('sounds/desert_wind.mp3');
+        windSound.loop = true;
+        document.body.onclick = () => windSound.play();
+    </script>
 </body>
 </html>

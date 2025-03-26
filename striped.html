@@ -2,150 +2,119 @@
 <html>
 <head>
     <link rel="stylesheet" href="cssrebuild.css">
-    <title>Striped</title>
+    <title>✟ Striped ✟</title>
     <style>
-        .main-wrapper {
-            background: linear-gradient(135deg, #1c1c1c, #2b2b2b);
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
+        body {
+            background: repeating-linear-gradient(45deg, #333 0px, #333 10px, #444 10px, #444 20px);
+            font-family: "Courier New", monospace !important;
         }
 
-        .header-image {
-            height: 50vh;
-            background: url('images/striped_main.jpg') center/cover;
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
+        .vintage-filter {
+            filter: sepia(100%) contrast(150%);
+            transition: all 0.5s;
         }
 
-        .header-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            display: flex;
-            align-items: flex-end;
-            padding: 2rem;
+        .vintage-filter:hover {
+            filter: none;
+            transform: scale(1.1) rotate(3deg);
         }
 
-        .movie-info {
-            color: #fff;
-            animation: slideUp 1s ease-out;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .story-card {
-            background: rgba(255,255,255,0.05);
-            padding: 2rem;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .story-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .image-container {
-            overflow: hidden;
-            border-radius: 10px;
-            margin: 1rem 0;
-        }
-
-        .scene-img {
+        .old-film {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            transition: transform 0.5s;
+            height: 100%;
+            background: url('images/film_grain.gif');
+            pointer-events: none;
+            opacity: 0.3;
+            z-index: 9999;
         }
 
-        .scene-img:hover {
-            transform: scale(1.05);
-        }
-
-        .cast-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            padding: 2rem 0;
-        }
-
-        .actor-card {
-            width: 250px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 15px;
+        .typewriter {
             overflow: hidden;
-            transition: all 0.3s;
+            border-right: .15em solid #fff;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
         }
 
-        .actor-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
         }
 
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #fff; }
         }
     </style>
 </head>
-<body>
-    <div class="flexeschkere">
-        <div class="backbackback">
-            <a href="headsiteworking.html" style="color: #fff;"><p class="pupu">Back</p></a>
-        </div>
-    </div>
+<body text="#FFFFFF">
+    <div class="old-film"></div>
 
-    <div class="main-wrapper">
-        <div class="header-image">
-            <div class="header-overlay">
-                <div class="movie-info">
-                    <h1 style="font-size: 3rem; margin-bottom: 1rem;">Striped | 2008</h1>
-                    <p style="font-size: 1.2rem;">История дружбы в непростое время</p>
-                </div>
-            </div>
-        </div>
+    <table width="100%" bgcolor="#000000" cellpadding="10">
+        <tr>
+            <td align="center">
+                <a href="headsiteworking.html">
+                    <marquee behavior="alternate" width="200">
+                        <font face="Old English Text MT" size="6">⚜ BACK ⚜</font>
+                    </marquee>
+                </a>
+            </td>
+        </tr>
+    </table>
 
-        <div class="content-grid">
-            <div class="story-card">
-                <h2>Сюжет</h2>
-                <p style="line-height: 1.8;">
-                    История о дружбе двух мальчиков в разных сторонах забора, 
-                    показывающая невинный взгляд детей на сложный исторический период.
-                </p>
-            </div>
+    <center>
+        <h1 class="typewriter" style="font-family:'Times New Roman';letter-spacing:5px;">
+            ✟ Striped | 2008 | Драма ✟
+        </h1>
 
-            <div class="image-container">
-                <img src="images/striped_scene1.jpg" alt="Scene 1" class="scene-img">
-            </div>
-        </div>
+        <table width="90%" bgcolor="#111111" cellspacing="10">
+            <tr>
+                <td width="40%" align="center">
+                    <img src="images/striped_main.jpg" class="vintage-filter" style="border:10px double #333;">
+                </td>
+                <td>
+                    <marquee direction="up" height="300" scrollamount="1">
+                        <font size="4">
+                            История о дружбе двух мальчиков по разные стороны забора...
+                        </font>
+                    </marquee>
+                </td>
+            </tr>
+        </table>
 
-        <div class="cast-container">
-            <div class="actor-card">
-                <img src="images/asa.jpg" alt="Asa Butterfield" style="width: 100%;">
-                <div style="padding: 1rem;">
-                    <h3 style="color: #fff;">Asa Butterfield</h3>
-                    <p style="color: #aaa;">Bruno</p>
-                </div>
-            </div>
-            <div class="actor-card">
-                <img src="images/jack.jpg" alt="Jack Scanlon" style="width: 100%;">
-                <div style="padding: 1rem;">
-                    <h3 style="color: #fff;">Jack Scanlon</h3>
-                    <p style="color: #aaa;">Shmuel</p>
-                </div>
-            </div>
+        <blink>
+            <h2>⚜ АКТЁРЫ ⚜</h2>
+        </blink>
+
+        <div style="background:url('images/vintage_paper.gif')">
+            <marquee behavior="scroll" direction="right" scrollamount="3">
+                <img src="images/asa.jpg" width="150" class="vintage-filter" style="border:5px solid #333;margin:10px;">
+                <img src="images/jack.jpg" width="150" class="vintage-filter" style="border:5px solid #333;margin:10px;">
+            </marquee>
         </div>
-    </div>
+    </center>
+
+    <script>
+        // Эффект старой пленки
+        function addScratch() {
+            var scratch = document.createElement('div');
+            scratch.style.position = 'fixed';
+            scratch.style.width = '2px';
+            scratch.style.height = '100%';
+            scratch.style.background = 'white';
+            scratch.style.left = Math.random() * 100 + '%';
+            scratch.style.opacity = '0.1';
+            document.body.appendChild(scratch);
+            setTimeout(() => scratch.remove(), 100);
+        }
+        setInterval(addScratch, 500);
+
+        // Звук старого проектора
+        var projectorSound = new Audio('sounds/projector.mp3');
+        projectorSound.loop = true;
+        document.body.onclick = () => projectorSound.play();
+    </script>
 </body>
 </html>

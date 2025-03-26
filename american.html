@@ -3,53 +3,78 @@
 <head>
     <link rel="stylesheet" href="cssrebuild.css">
     <title>American</title>
+    <style>
+        blink { animation: blink 1s step-start infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+        .super-text { color: #ff0000; text-shadow: 2px 2px #00ff00, -2px -2px #0000ff; }
+        #special-div { background: repeating-linear-gradient(45deg, #ff0000, #ff0000 10px, #00ff00 10px, #00ff00 20px); }
+    </style>
 </head>
-<body>
+<body background="images/american.jpg" text="white" link="red" vlink="blue" alink="green">
     <div class="flexeschkere">
         <div class="backbackback">
-            <a href="headsiteworking.html" style="color: #a0a5a0d8;"><p class="pupu">Back</p></a>
+            <a href="headsiteworking.html" style="color: #a0a5a0d8;font-size:72px;text-decoration:blink"><marquee><p class="pupu">НАЗАД НА ГЛАВНУЮ СТРАНИЦУ НАЖМИ СЮДА!!!</p></marquee></a>
         </div>
     </div>
 
-    <h1 style="text-align: center;">
-        American | 2000 | Триллер/Драма
-    </h1>
+    <center>
+        <blink>
+            <font size="7" face="Comic Sans MS">
+                <h1 class="super-text" style="text-align: center;background-color:yellow;padding:20px;">
+                    ★☆★ American | 2000 | Триллер/Драма ★☆★
+                </h1>
+            </font>
+        </blink>
+    </center>
 
-    <div>
-        <p class="borderall" style="text-transform: uppercase;">Сюжет</p>
+    <div id="special-div">
+        <p class="borderall" style="text-transform: uppercase;font-family:Papyrus;font-size:36px;">СЮЖЕТ!!!</p>
     </div>
 
-    <div class="dewdew">
-        <div class="dewdew1">
-            <img src="images/american.jpg" alt="American poster" width="479">
-        </div>
-        <div class="texter">
-            <p style="font-size:255%;">История успешного работника с Уолл-стрит, который ведёт необычный образ жизни. Днём он - успешный бизнесмен, а ночью проявляет свою тёмную сторону.</p>
-        </div>
-    </div>
+    <table width="100%" cellpadding="20" cellspacing="0" border="5">
+        <tr>
+            <td align="center" bgcolor="#ff00ff">
+                <img src="images/american.jpg" width="479" height="600" border="10">
+            </td>
+            <td bgcolor="#00ffff">
+                <font size="6" color="red">
+                    <marquee direction="up" scrollamount="2">
+                        История успешного работника с Уолл-стрит, который ведёт необычный образ жизни...
+                    </marquee>
+                </font>
+            </td>
+        </tr>
+    </table>
 
-    <p class="borderall" style="text-transform: uppercase;">Кадры из фильма</p>
+    <marquee behavior="alternate" scrollamount="30">
+        <p class="borderall" style="text-transform: uppercase;">СМОТРИТЕ КАДРЫ ИЗ ФИЛЬМА!!!</p>
+    </marquee>
     
-    <div class="dewdew">
-        <img src="images/american_scene1.jpg" alt="Scene 1">
-        <img src="images/american_scene2.jpg" alt="Scene 2">
+    <table width="100%">
+        <tr>
+            <td><img src="images/american_scene1.jpg" width="100%" style="border:dotted 5px pink"></td>
+            <td><img src="images/american_scene2.jpg" width="100%" style="border:dashed 5px lime"></td>
+        </tr>
+    </table>
+
+    <blink>
+        <p class="borderall" style="text-transform: uppercase;">НАШИ АКТЕРЫ!!!</p>
+    </blink>
+    
+    <div class="actry" style="background:url('images/stars.gif')">
+        <marquee direction="right" scrollamount="10">
+            <img src="images/christian_bale.jpg" height="200" style="border-radius:50%;border:solid 10px gold">
+            <img src="images/willem_dafoe.jpg" height="200" style="border-radius:50%;border:solid 10px silver">
+            <img src="images/jared_leto.jpg" height="200" style="border-radius:50%;border:solid 10px bronze">
+        </marquee>
     </div>
 
-    <p class="borderall" style="text-transform: uppercase;">Актёры</p>
-    
-    <div class="actry">
-        <div class="actryone">
-            <img src="images/christian_bale.jpg" alt="Christian Bale">
-            <p>Christian Bale</p>
-        </div>
-        <div class="actryone">
-            <img src="images/willem_dafoe.jpg" alt="Willem Dafoe">
-            <p>Willem Dafoe</p>
-        </div>
-        <div class="actryone">
-            <img src="images/jared_leto.jpg" alt="Jared Leto">
-            <p>Jared Leto</p>
-        </div>
-    </div>
+    <script language="JavaScript">
+        function changeColors() {
+            document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            setTimeout(changeColors, 1000);
+        }
+        changeColors();
+    </script>
 </body>
 </html>

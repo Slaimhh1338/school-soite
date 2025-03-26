@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="cssrebuild.css">
-    <title>Eternal</title>
+    <title>∙∙·▫▫ₒₒ☆ Eternal ☆ₒₒ▫▫·∙∙</title>
     <style>
         .movie-container {
             background: linear-gradient(45deg, #201c2b, #2d2838);
@@ -12,12 +12,23 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
-        .movie-title {
-            text-align: center;
-            color: #a0a5a0d8;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            animation: titleFade 1.5s ease-in;
+        .rainbow-text {
+            background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbow 3s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        .sparkle { animation: sparkle 0.5s infinite; }
+        @keyframes sparkle {
+            0% { text-shadow: 2px 2px 5px #fff; }
+            50% { text-shadow: -2px -2px 5px #ff0; }
+            100% { text-shadow: 2px 2px 5px #f0f; }
         }
 
         .scene-image {
@@ -49,55 +60,77 @@
         }
     </style>
 </head>
-<body>
-    <div class="flexeschkere">
-        <div class="backbackback">
-            <a href="headsiteworking.html" style="color: #a0a5a0d8;"><p class="pupu">Back</p></a>
-        </div>
-    </div>
+<body bgcolor="#000000" text="#FF69B4">
+    <table width="100%" border="1" cellpadding="15" cellspacing="0">
+        <tr>
+            <td align="center">
+                <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:url('images/glitter.gif');opacity:0.3;z-index:-1;"></div>
+                <img src="images/back.gif" width="50">
+                <a href="headsiteworking.html" style="color: #a0a5a0d8;">
+                    <marquee behavior="alternate" width="200">⋆˚✿˖°НАЗАД°˖✿˚⋆</marquee>
+                </a>
+            </td>
+        </tr>
+    </table>
 
-    <div class="movie-container">
-        <h1 class="movie-title">
-            Eternal | 2004 | Драма/Романтика
-        </h1>
+    <center>
+        <div class="movie-container" style="border:double 10px #FF00FF;">
+            <h1 class="rainbow-text" style="font-family:'Curlz MT';font-size:72px;">
+                ♥•*¨`*•♫.•Eternal♥•*¨`*•♫.• | 2004 | ♥Драма/Романтика♥
+            </h1>
 
-        <div>
-            <p class="borderall" style="text-transform: uppercase;">Сюжет</p>
-        </div>
+            <marquee direction="up" height="200" scrollamount="2">
+                <font face="Comic Sans MS" size="5" color="#00FFFF">
+                    История о паре, которая решает стереть друг друга из памяти...
+                </font>
+            </marquee>
 
-        <div class="dewdew">
-            <div class="dewdew1">
-                <img src="images/eternal.jpg" alt="Eternal poster" width="479" class="scene-image">
-            </div>
-            <div class="texter">
-                <p style="font-size:255%;">История о паре, которая решает стереть друг друга из своей памяти после болезненного расставания. Но во время процесса удаления воспоминаний они вновь понимают, насколько дороги друг другу.</p>
-            </div>
+            <table width="100%">
+                <tr>
+                    <td width="50%" align="center">
+                        <img src="images/eternal.jpg" width="479" style="border:ridge 15px #FFD700;">
+                    </td>
+                    <td>
+                        <blink>
+                            <h2 class="sparkle">★Главные актеры★</h2>
+                        </blink>
+                        <ul type="♥">
+                            <li><font color="#FF1493">Jim Carrey</font></li>
+                            <li><font color="#FF69B4">Kate Winslet</font></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
         </div>
+    </center>
 
-        <p class="borderall" style="text-transform: uppercase;">Кадры из фильма</p>
-        
-        <div class="dewdew">
-            <img src="images/eternal_scene1.jpg" alt="Scene 1" class="scene-image">
-            <img src="images/eternal_scene2.jpg" alt="Scene 2" class="scene-image">
-            <img src="images/eternal_scene3.jpg" alt="Scene 3" class="scene-image">
-        </div>
+    <script language="JavaScript">
+        function snowflakes() {
+            var snow = document.createElement('div');
+            snow.innerHTML = '❄';
+            snow.style.position = 'fixed';
+            snow.style.left = Math.random() * 100 + '%';
+            snow.style.top = '-20px';
+            snow.style.color = '#fff';
+            snow.style.fontSize = '20px';
+            snow.style.animation = 'fall ' + (Math.random() * 5 + 3) + 's linear';
+            document.body.appendChild(snow);
+            setTimeout(() => snow.remove(), 8000);
+        }
+        setInterval(snowflakes, 100);
 
-        <p class="borderall" style="text-transform: uppercase;">Актёры</p>
-        
-        <div class="actry">
-            <div class="actor-card">
-                <img src="images/jim_carrey.jpg" alt="Jim Carrey">
-                <p>Jim Carrey</p>
-            </div>
-            <div class="actor-card">
-                <img src="images/kate_winslet.jpg" alt="Kate Winslet">
-                <p>Kate Winslet</p>
-            </div>
-            <div class="actor-card">
-                <img src="images/kirsten_dunst.jpg" alt="Kirsten Dunst">
-                <p>Kirsten Dunst</p>
-            </div>
-        </div>
-    </div>
+        function playMusic() {
+            var audio = new Audio('music/romantic.midi');
+            audio.loop = true;
+            audio.play();
+        }
+        document.body.onclick = playMusic;
+    </script>
+
+    <style>
+        @keyframes fall {
+            to { top: 120%; transform: rotate(360deg); }
+        }
+    </style>
 </body>
 </html>
