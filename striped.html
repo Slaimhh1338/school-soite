@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="cssrebuild.css">
+    <title>Striped</title>
+    <style>
+        .main-wrapper {
+            background: linear-gradient(135deg, #1c1c1c, #2b2b2b);
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header-image {
+            height: 50vh;
+            background: url('images/striped_main.jpg') center/cover;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .header-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+        }
+
+        .movie-info {
+            color: #fff;
+            animation: slideUp 1s ease-out;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .story-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-container {
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .scene-img {
+            width: 100%;
+            transition: transform 0.5s;
+        }
+
+        .scene-img:hover {
+            transform: scale(1.05);
+        }
+
+        .cast-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+
+        .actor-card {
+            width: 250px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .actor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flexeschkere">
+        <div class="backbackback">
+            <a href="headsiteworking.html" style="color: #fff;"><p class="pupu">Back</p></a>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="header-image">
+            <div class="header-overlay">
+                <div class="movie-info">
+                    <h1 style="font-size: 3rem; margin-bottom: 1rem;">Striped | 2008</h1>
+                    <p style="font-size: 1.2rem;">История дружбы в непростое время</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="story-card">
+                <h2>Сюжет</h2>
+                <p style="line-height: 1.8;">
+                    История о дружбе двух мальчиков в разных сторонах забора, 
+                    показывающая невинный взгляд детей на сложный исторический период.
+                </p>
+            </div>
+
+            <div class="image-container">
+                <img src="images/striped_scene1.jpg" alt="Scene 1" class="scene-img">
+            </div>
+        </div>
+
+        <div class="cast-container">
+            <div class="actor-card">
+                <img src="images/asa.jpg" alt="Asa Butterfield" style="width: 100%;">
+                <div style="padding: 1rem;">
+                    <h3 style="color: #fff;">Asa Butterfield</h3>
+                    <p style="color: #aaa;">Bruno</p>
+                </div>
+            </div>
+            <div class="actor-card">
+                <img src="images/jack.jpg" alt="Jack Scanlon" style="width: 100%;">
+                <div style="padding: 1rem;">
+                    <h3 style="color: #fff;">Jack Scanlon</h3>
+                    <p style="color: #aaa;">Shmuel</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

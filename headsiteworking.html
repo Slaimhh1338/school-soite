@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.kinopoisk.ru/favicon.ico" />
+    <link rel="stylesheet" href="cssrebuild.css">
+    <title>TOP-10 kino</title>
+    <style>
+        body {
+            background-color: #1a1a1a !important;
+        }
+        
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .movie-card {
+            position: relative;
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #2c2c2c;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: filter 0.3s ease;
+        }
+
+        .movie-card:hover img {
+            filter: brightness(0.7);
+        }
+
+        .movie-rank {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(33, 33, 33, 0.9);
+            color: #d4af37;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .movie-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: #fff;
+            text-align: center;
+        }
+
+        .page-title {
+            text-align: center;
+            color: #d4af37;
+            font-size: 3rem;
+            margin: 2rem 0;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">TOP-10 Фильмов</h1>
+
+    <div class="movies-grid">
+        <a href="american.html" class="movie-card">
+            <div class="movie-rank">1</div>
+            <img src="images/american.jpg" alt="American">
+            <div class="movie-title">American</div>
+        </a>
+
+        <a href="eternal.html" class="movie-card">
+            <div class="movie-rank">2</div>
+            <img src="images/eternal.jpg" alt="Eternal">
+            <div class="movie-title">Eternal</div>
+        </a>
+
+        <a href="bb.html" class="movie-card">
+            <div class="movie-rank">3</div>
+            <img src="https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/breaking_bad_4.png" alt="Breaking Bad">
+            <div class="movie-title">Breaking Bad</div>
+        </a>
+
+        <a href="godfather.html" class="movie-card">
+            <div class="movie-rank">4</div>
+            <img src="images/godfather.jpg" alt="The Godfather">
+            <div class="movie-title">The Godfather</div>
+        </a>
+
+        <a href="nomadland.html" class="movie-card">
+            <div class="movie-rank">5</div>
+            <img src="images/nomad_landscape.jpg" alt="Nomadland">
+            <div class="movie-title">Nomadland</div>
+        </a>
+
+        <a href="striped.html" class="movie-card">
+            <div class="movie-rank">6</div>
+            <img src="images/striped_main.jpg" alt="Striped">
+            <div class="movie-title">Striped</div>
+        </a>
+    </div>
+</body>
+</html>

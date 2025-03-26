@@ -1,0 +1,63 @@
+body{
+    background-color: #201c2b
+     !important;}
+h1{color: darkcyan;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 300%;
+  text-transform: uppercase;}
+p:not(.pupu){color: #008000d8;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 160%;}
+.dewdew{
+     display: flex; gap: 15px;
+}
+.dewdew4:hover img {
+  filter: brightness(0.75);
+}
+.texter {
+border: 5px outset #7f8a7e;
+background-color: #181425;    
+text-align: center;
+}
+.borderlast {
+    border-style: solid;
+    border-color: #e91414;
+    border-radius: 25px;
+    padding: 25px!important;
+    text-align:center!important;
+}
+    /* background-image: url("https://resizing.flixster.com/HskdLK-tIX-tdKoqy8qDqTxmwuU=/620x336/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p185846_i_h10_ab.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; */
+/*#tsplayer{
+    display: none;
+ }
+
+#play-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #7e7e7b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #play-button:hover {
+        background-color: #7e7e7b; 
+    }*/
+    
+   /*  #borderact{
+    border: 10px solid transparent;
+    padding: 15px;
+    }     */
+
+
+.borderall{
+    border-style: double;
+    border-color: #2fa82f;
+    border-radius: 9px;
+    padding: 5px!important;
+    text-align:center!important;
+    
+}

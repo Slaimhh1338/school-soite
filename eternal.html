@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="cssrebuild.css">
+    <title>Eternal</title>
+    <style>
+        .movie-container {
+            background: linear-gradient(45deg, #201c2b, #2d2838);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .movie-title {
+            text-align: center;
+            color: #a0a5a0d8;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: titleFade 1.5s ease-in;
+        }
+
+        .scene-image {
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .scene-image:hover {
+            transform: scale(1.05);
+        }
+
+        .actor-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .actor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        @keyframes titleFade {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="flexeschkere">
+        <div class="backbackback">
+            <a href="headsiteworking.html" style="color: #a0a5a0d8;"><p class="pupu">Back</p></a>
+        </div>
+    </div>
+
+    <div class="movie-container">
+        <h1 class="movie-title">
+            Eternal | 2004 | Драма/Романтика
+        </h1>
+
+        <div>
+            <p class="borderall" style="text-transform: uppercase;">Сюжет</p>
+        </div>
+
+        <div class="dewdew">
+            <div class="dewdew1">
+                <img src="images/eternal.jpg" alt="Eternal poster" width="479" class="scene-image">
+            </div>
+            <div class="texter">
+                <p style="font-size:255%;">История о паре, которая решает стереть друг друга из своей памяти после болезненного расставания. Но во время процесса удаления воспоминаний они вновь понимают, насколько дороги друг другу.</p>
+            </div>
+        </div>
+
+        <p class="borderall" style="text-transform: uppercase;">Кадры из фильма</p>
+        
+        <div class="dewdew">
+            <img src="images/eternal_scene1.jpg" alt="Scene 1" class="scene-image">
+            <img src="images/eternal_scene2.jpg" alt="Scene 2" class="scene-image">
+            <img src="images/eternal_scene3.jpg" alt="Scene 3" class="scene-image">
+        </div>
+
+        <p class="borderall" style="text-transform: uppercase;">Актёры</p>
+        
+        <div class="actry">
+            <div class="actor-card">
+                <img src="images/jim_carrey.jpg" alt="Jim Carrey">
+                <p>Jim Carrey</p>
+            </div>
+            <div class="actor-card">
+                <img src="images/kate_winslet.jpg" alt="Kate Winslet">
+                <p>Kate Winslet</p>
+            </div>
+            <div class="actor-card">
+                <img src="images/kirsten_dunst.jpg" alt="Kirsten Dunst">
+                <p>Kirsten Dunst</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

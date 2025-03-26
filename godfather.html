@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="cssrebuild.css">
+    <title>The Godfather</title>
+    <style>
+        .cinematic-container {
+            background: linear-gradient(to right, #1a1617, #2b1f20);
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 20px;
+        }
+
+        .film-title {
+            font-family: 'Georgia', serif;
+            color: #d4af37;
+            text-align: center;
+            font-size: 3em;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            animation: titleReveal 1.2s ease-out;
+        }
+
+        .plot-container {
+            background: rgba(0,0,0,0.3);
+            padding: 25px;
+            border-left: 4px solid #d4af37;
+            margin: 20px 0;
+        }
+
+        .scene-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .scene-image {
+            width: 100%;
+            border-radius: 10px;
+            transition: all 0.4s ease;
+            filter: sepia(20%);
+        }
+
+        .scene-image:hover {
+            transform: scale(1.03);
+            filter: sepia(0%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .cast-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .actor-profile {
+            background: linear-gradient(145deg, #2a2122, #1a1617);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .actor-profile:hover {
+            transform: translateY(-10px);
+        }
+
+        @keyframes titleReveal {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flexeschkere">
+        <div class="backbackback">
+            <a href="headsiteworking.html" style="color: #d4af37;"><p class="pupu">Back</p></a>
+        </div>
+    </div>
+
+    <div class="cinematic-container">
+        <h1 class="film-title">
+            The Godfather | 1972 | Криминальная драма
+        </h1>
+
+        <div class="plot-container">
+            <h2 style="color: #d4af37;">Сюжет</h2>
+            <p style="font-size: 1.2em; line-height: 1.6;">
+                История могущественной семьи Корлеоне, нью-йоркской мафиозной династии. Фильм охватывает период с 1945 по 1955 годы, рассказывая о трансформации Майкла Корлеоне из непричастного к семейному бизнесу военного героя в безжалостного мафиозного босса.
+            </p>
+        </div>
+
+        <div class="scene-gallery">
+            <img src="images/godfather_scene1.jpg" alt="Scene 1" class="scene-image">
+            <img src="images/godfather_scene2.jpg" alt="Scene 2" class="scene-image">
+            <img src="images/godfather_scene3.jpg" alt="Scene 3" class="scene-image">
+        </div>
+
+        <h2 style="color: #d4af37; text-align: center; margin-top: 40px;">В главных ролях</h2>
+        <div class="cast-section">
+            <div class="actor-profile">
+                <img src="images/marlon_brando.jpg" alt="Marlon Brando" style="width: 100%; border-radius: 10px;">
+                <h3 style="color: #d4af37;">Marlon Brando</h3>
+                <p>Don Vito Corleone</p>
+            </div>
+            <div class="actor-profile">
+                <img src="images/al_pacino.jpg" alt="Al Pacino" style="width: 100%; border-radius: 10px;">
+                <h3 style="color: #d4af37;">Al Pacino</h3>
+                <p>Michael Corleone</p>
+            </div>
+            <div class="actor-profile">
+                <img src="images/james_caan.jpg" alt="James Caan" style="width: 100%; border-radius: 10px;">
+                <h3 style="color: #d4af37;">James Caan</h3>
+                <p>Sonny Corleone</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

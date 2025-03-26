@@ -1,0 +1,78 @@
+body{
+    background-color: #0b0815
+     !important;}
+h1{color: darkcyan;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 250%;
+  text-transform: uppercase;}
+p:not(.pupu){color: #008000d8;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 160%;}
+.dewdew{
+     display: flex; gap: 15px;
+}
+.dewdew4:hover img {
+  filter: brightness(0.75);
+}
+.texter {
+border: 5px outset #33662e;
+background-color: #0b0815;    
+text-align: center;
+}
+.borderlast {
+    border-style: solid;
+    border-color: #e91414;
+    border-radius: 25px;
+    padding: 25px!important;
+    text-align:center!important;
+}
+.borderall{
+    border-style: double;
+    border-color: #03ff03;
+    border-radius: 9px;
+    padding: 5px!important;
+    text-align:center!important;
+    
+}
+.flexeschkere {
+    display: flex;          
+    justify-content: space-between; 
+    align-items: center;    
+    width: 100%;           
+  }
+.notbackbackback{
+    padding: 10px 20px;
+      font-size: 16px;
+      color: #a0a5a0d8;
+      cursor: pointer;
+    } 
+.notbackbackback:hover{
+    background-color:#7e7e7b ;
+    }
+.backbackback {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #a0a5a0d8;
+      cursor: pointer;
+  }
+.backbackback:hover {
+      background-color: #7e7e7b; 
+  }
+.filmopi{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    ;font-size: 80%; color: rgb(136, 47, 219);
+    display: flex;
+    justify-self: auto;
+    
+}
+.filmopb{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80%; 
+    color: rgb(136, 47, 219);
+    display: flex;
+    justify-content: first baseline;
+    
+}
+a {
+    text-decoration: none;
+  }
