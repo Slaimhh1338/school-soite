@@ -70,7 +70,7 @@ text-align: center;
     font-size: 80%; 
     color: rgb(136, 47, 219);
     display: flex;
-    justify-content: first baseline;
+    justify-content: baseline;
     
 }
 a {
