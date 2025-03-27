@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.kinopoisk.ru/favicon.ico" />
+    <link rel="stylesheet" href="cssrebuild.css">
+    <title>TOP-10 kino</title>
+    <style>
+        body { background-color: #1a1a1a !important; }
+        div { display: block; }
+        .movie-card { background: #2c2c2c; position: relative; border-radius: 10px; overflow: hidden; transform: scale(1); transition: all 0.3s; margin-bottom: 20px; }
+        .movie-card:hover { transform: translateY(-10px) !important; }
+        .movie-card img { width: 100% !important; height: 400px !important; object-fit: cover !important; }
+        .movie-card:hover img { filter: brightness(0.7) !important; }
+        .movie-rank { position: absolute !important; top: 1rem; right: 1rem; background: #212121E6 !important; color: #d4af37; padding: 8px 16px; border-radius: 20px; font-weight: bold; z-index: 9999; }
+        .movie-title { position: absolute; bottom: 0; left: 0; right: 0; padding: 16px; background: linear-gradient(transparent, #000000E6); color: white; text-align: center; z-index: 9999; }
+        .page-title { text-align: center; color: #d4af37 !important; font-size: 48px !important; margin: 32px 0 !important; text-transform: uppercase; text-shadow: 2px 2px 4px #00000080; }
+        .movies-grid { display: inline-block; width: 100%; max-width: 1400px; margin: 0 auto; padding: 32px; }
+        @media screen and (min-width: 768px) {
+            .movies-grid { column-count: 2; }
+        }
+        @media screen and (min-width: 1024px) {
+            .movies-grid { column-count: 3; }
+        }
+    </style>
+</head>
+<body>
+    <marquee><h1 class="page-title">TOP-10 Фильмов</h1></marquee>
+
+    <center><div class="movies-grid">
+        <div onclick="window.location='american.html'" class="movie-card" style="cursor: pointer;">
+            <span class="movie-rank">1</span>
+            <img src="https://resizing.flixster.com/Nxwh8rn432BIKoZSux3nDuFPG5o=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p24116_p_v8_aa.jpg" alt="American" style="display: block;">
+            <span class="movie-title">American</span>
+        </div>
+
+        <div onclick="window.location='eternal.html'" class="movie-card" style="cursor: pointer;">
+            <span class="movie-rank">2</span>
+            <img src="https://resizing.flixster.com/IulC26NybWysWfTBuyR9HfAFY5g=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p33409_p_v10_bb.jpg" alt="Eternal" style="display: block;">
+            <span class="movie-title">Eternal</span>
+        </div>
+
+        <div onclick="window.location='bb.html'" class="movie-card" style="cursor: pointer;">
+            <span class="movie-rank">3</span>
+            <img src="https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/breaking_bad_4.png" alt="Breaking Bad" style="display: block;">
+            <span class="movie-title">Breaking Bad</span>
+        </div>
+
+        <div onclick="window.location='godfather.html'" class="movie-card" style="cursor: pointer;">
+            <span class="movie-rank">4</span>
+            <img src="https://resizing.flixster.com/aLKvx7GjWgFMOfboq5KNOX1kCCg=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p6326_p_v13_be.jpg" alt="The Godfather" style="display: block;">
+            <span class="movie-title">Godfather</span>
+        </div>
+
+        <div onclick="window.location='nomadland.html'" class="movie-card" style="cursor: pointer;">
+            <span class="movie-rank">5</span>
+            <img src="https://resizing.flixster.com/0a_Yc2rV5bRMQvg3vlVDNGeEOCw=/206x305/v2/https://resizing.flixster.com/7TTnMSfqk40GyhbZ_ael5N4Zp9o=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzJjOWRjNGVkLTIwNDAtNDlmZS04MDM5LTNjYzM0ZDFlODhhMy5qcGc=" alt="Nomadland" style="display: block;">
+            <span class="movie-title">Nomadland</span>
+        </div>
+
+        <div onclick="window.location='striped.html'" class="movie-card" style="cursor: pointer;">
+            <span class="movie-rank">6</span>
+            <img src="https://resizing.flixster.com/0Oux10IxxvKVdVHlm0wf4wnsfhE=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p187089_p_v8_an.jpg" alt="Striped" style="display: block;">
+            <span class="movie-title">Striped</span>
+        </div>
+    </div></center>
+
+    <script>
+        function makeCardsMove() {
+            var cards = document.getElementsByClassName('movie-card');
+            for(var i = 0; i < cards.length; i++) {
+                cards[i].style.transform = 'translateY(' + Math.sin(Date.now() / 1000 + i) * 5 + 'px)';
+            }
+            requestAnimationFrame(makeCardsMove);
+        }
+        makeCardsMove();
+    </script>
+</body>
+</html>
